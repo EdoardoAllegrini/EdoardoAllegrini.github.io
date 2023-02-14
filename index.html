@@ -1,14 +1,179 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
 
-    <body>
-        <div id="firstdownload">    
-            <a href="downloads/None">
-                Download
-            </a>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">About <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">I'm Edoardo Allegrini</h1>
+                <p>I was born in 2002 in Rome, Italy.</p>
+            </div>
         </div>
 
-    </body>
+        <div class="container-time-line">
+            <h3>Education</h3>
+            <div class="rightbox">
+                <div class="rb-container">
+                    <ul class="rb">
+                        <li class="rb-item" ng-repeat="itembx">
+                            <div class="timestamp">
+                                2020-current<br>
+                            </div>
+                            <div class="item-title">Computer Science student at <a id="link"
+                                    href="https://www.uniroma1.it" target="_blank" rel="noopener noreferrer">Sapienza
+                                    University</a> </div>
+
+                        </li>
+                        <li class="rb-item" ng-repeat="itembx">
+                            <div class="timestamp">
+                                2015-2020<br>
+                            </div>
+                            <div class="item-title">Scientific High School at <a id="link"
+                                    href="https://www.liceosocrate.edu.it" target="_blank"
+                                    rel="noopener noreferrer">Liceo Scientifico Socrate</a></div>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-time-line">
+            <h3>Experience</h3>
+            <div class="rightbox">
+                <div class="rb-container">
+                    <ul class="rb">
+                        <li class="rb-item" ng-repeat="itembx">
+                            <div class="timestamp">
+                                2022-2023<br>
+                            </div>
+                            <div class="item-title">Web Developer/Analyst<br>
+                                in a University Project during the course "Web and Software Architecture".
+                                <br> <a id="link" href="http://gamificationlab.uniroma1.it/notes/Project.pdf"
+                                    target="_blank" rel="noopener noreferrer">Project Specification</a>
+                            </div>
+
+                        </li>
+                        <li class="rb-item" ng-repeat="itembx">
+                            <div class="timestamp">
+                                2021<br>
+                            </div>
+                            <div class="item-title">Team Leader and Developer in a University Project (Java), <br>
+                                analysis, design and coding of a script that scrapes the dynasties of all Roman Emperors
+                                from <a id="link" href="https://it.wikipedia.org/wiki/Imperatori_romani" target="_blank"
+                                    rel="noopener noreferrer">Wikipedia</a>
+                                and builds a GUI representing them as a family tree
+                            </div>
+
+                        </li>
+                        <li class="rb-item" ng-repeat="itembx">
+                            <div class="timestamp">
+                                2018<br>
+                            </div>
+                            <div class="item-title">Web Developer/Analyst (alternanza scuola-lavoro), <br>partnership
+                                with Physics Department of Roma Tre University. <br> <a id="link"
+                                    href="https://astrowebsocrate.wordpress.com" target="_blank"
+                                    rel="noopener noreferrer">Astroweb Project</a></div>
+
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-time-line">
+            <h3>Volunteer experiences</h3>
+            <div class="rightbox">
+                <div class="rb-container">
+                    <ul class="rb">
+                        <li class="rb-item" ng-repeat="itembx">
+                            <div class="timestamp">
+                                2021-2022<br>
+                            </div>
+                            <div class="item-title"><a id="link" href="https://astrowebsocrate.wordpress.com"
+                                    target="_blank" rel="noopener noreferrer">Astroweb Project</a></div>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-time-line">
+            <h3>Certifications</h3>
+            <div class="rightbox">
+                <div class="rb-container">
+                    <ul class="rb">
+                        <li class="rb-item" ng-repeat="itembx">
+                            <div class="timestamp">
+                                2019<br>
+                            </div>
+                            <div class="item-title">Pass With Merit
+                                in the
+                                Preliminary English Test Council of Europe Level B1</div>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
