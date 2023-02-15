@@ -1,5 +1,7 @@
 body {
     background-color: black;
+    position: absolute;
+    width: auto;
 }
 
 nav {
@@ -8,6 +10,10 @@ nav {
     border: 1px solid antiquewhite;
 }
 
+main {
+  margin: 10px;
+  border-radius: 15px;
+}
 .nav-link {
     color: antiquewhite !important;
 }
@@ -28,7 +34,6 @@ nav {
 
 .container-time-line {
   background: #232931;
-  width: 640px;
   margin: 0 auto;
   position: relative;
   margin-top: 10%;
@@ -101,7 +106,6 @@ nav {
 ul.rb li .timestamp {
   color: #50d890;
   position: relative;
-  width: 400px;
   font-size: 12px;
 }
 
