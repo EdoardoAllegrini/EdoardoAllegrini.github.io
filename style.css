@@ -111,3 +111,8 @@ h3 {
     margin: 20px;
 }
  
+.disab {
+  cursor: default;
+  pointer-events: none;
+  color: #EBEBE4 !important;
+}
