@@ -1,0 +1,194 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: black;
+}
+
+main {
+  margin: 10px;
+  border-radius: 15px;
+  margin-top: 76px;
+}
+
+.nav-link {
+  color: antiquewhite !important;
+}
+
+.nav-link:hover {
+  color: wheat !important;
+}
+
+.jumbotron {
+  background-color: #343a40 !important;
+  color: antiquewhite;
+}
+
+#link {
+  color: darkcyan;
+}
+
+.row {
+  color: antiquewhite;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: transparent !important;
+  padding: 0;
+}
+
+.cont-nav {
+  position: relative;
+  margin: 10px;
+  border-radius: 15px;
+  border: 1px solid antiquewhite;
+  background-color: #343a40;
+  width: 100%;
+  padding: .5rem 1rem;
+}
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+/* html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  font-family: 'DM Sans', sans-serif;
+  transition: background .4s ease-in;
+  background-color: #c394f8;
+  
+
+} */
+input[type=radio] {
+  display: none;
+}
+
+.card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+  transform: translatex(-40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+  transform: translatex(40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+  
+
+}
+#item-1:checked ~ .cards #song-1 img, #item-2:checked ~ .cards #song-2 img, #item-3:checked ~ .cards #song-3 img {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+.player {
+  background-color: black;
+  border-radius: 8px;
+  padding: 16px 10px;
+  width: 100%;
+}
+
+.upper-part {
+  position: relative;
+  align-items: center;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.play-icon{ margin-right: 10px; }
+
+.info {
+  width: calc(100% - 32px);
+  display: block;
+}
+
+.info .title {
+  color: antiquewhite;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.sub-line {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.info-area {
+  width: 100%;
+  top: 0;
+  left: 30px;
+  transition: transform .4s ease-in;
+}
+
+.info {
+  display: none;
+}
+
+.disab {
+  cursor: default;
+  pointer-events: none;
+  color: #EBEBE4 !important;
+}
+
+.info p {
+  color: white;
+}

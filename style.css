@@ -1,35 +1,37 @@
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
 body {
-    background-color: black;
-}
-
-nav {
-    margin: 10px;
-    border-radius: 15px;
-    border: 1px solid antiquewhite;
+  background-color: black;
 }
 
 main {
   margin: 10px;
   border-radius: 15px;
+  margin-top: 76px;
 }
+
 .nav-link {
-    color: antiquewhite !important;
+  color: antiquewhite !important;
 }
+
+.nav-link:hover {
+  color: wheat !important;
+}
+
 .jumbotron {
-    background-color: #343a40!important;
-    color: antiquewhite;
+  background-color: #343a40 !important;
+  color: antiquewhite;
 }
 
 #link {
-    color: darkcyan;
+  color: darkcyan;
 }
 
 .row {
-    color: antiquewhite;
+  color: antiquewhite;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
@@ -106,13 +108,32 @@ ul.rb li .timestamp {
 }
 
 h3 {
-    color: antiquewhite;
-    position: relative;
-    margin: 20px;
+  color: antiquewhite;
+  position: relative;
+  margin: 20px;
 }
- 
+
 .disab {
   cursor: default;
   pointer-events: none;
   color: #EBEBE4 !important;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: transparent !important;
+  padding: 0;
+}
+
+.cont-nav {
+  position: relative;
+  margin: 10px;
+  border-radius: 15px;
+  border: 1px solid antiquewhite;
+  background-color: #343a40;
+  width: 100%;
+  padding: .5rem 1rem;
 }
