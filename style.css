@@ -54,7 +54,6 @@ main {
 }
 
 .rightbox {
-  padding: 0em 10rem 0em 0em;
   height: 100%;
 }
 
@@ -75,7 +74,7 @@ main {
 .rb-container ul.rb li {
   list-style: none;
   margin: auto;
-  margin-left: 10em;
+  margin-left: 4em;
   min-height: 50px;
   border-left: 1px dashed #fff;
   padding: 0 0 50px 30px;
