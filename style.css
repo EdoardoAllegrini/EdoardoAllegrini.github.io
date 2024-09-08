@@ -45,7 +45,7 @@ main {
 
 .indent {
   display: inline-block;
-  padding-left: 2em; /* Adjust the indentation as needed */
+  padding-left: 2em;
 }
 
 .item-title > #prof{
