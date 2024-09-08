@@ -43,6 +43,15 @@ main {
 
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 
+.indent {
+  display: inline-block;
+  padding-left: 2em; /* Adjust the indentation as needed */
+}
+
+.item-title > #prof{
+  text-decoration: underline;
+}
+
 .container-time-line {
   background: #232931;
   margin: 0 auto;
