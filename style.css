@@ -5,6 +5,7 @@ body {
 
 body {
   background-color: black;
+  font-size: 20px;
 }
 
 main {
@@ -161,3 +162,44 @@ h3 {
   color: antiquewhite;
 
 } */
+
+.profile-image {
+  width: 300px; /* Adjust the size as needed */
+  height: 300px; /* Keep it equal for a perfect circle */
+  border-radius: 50%; /* This makes the image circular */
+  object-fit: cover; /* Ensures the image covers the area */
+  border: 3px solid #fff; /* Optional: add a border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: add a shadow */
+}
+.profile-container {
+  margin-right: 50px; /* Space between image and text */
+}
+
+
+.item-title {
+  border-radius: 5px; /* Slightly rounded corners */
+  padding: 10px; /* Padding for titles */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.item-title a {
+  text-decoration: none; /* Remove underline */
+}
+
+.item-title a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.authors {
+  font-size: 0.9em; /* Smaller font for author names */
+}
+
+.image-container {
+  text-align: center; /* Centers the image */
+  margin: 20px 0; /* Adds some vertical space around the image */
+}
+
+.publication-image {
+  max-width: 60%; /* Ensures the image is responsive */
+  height: auto; /* Maintains aspect ratio */
+}
