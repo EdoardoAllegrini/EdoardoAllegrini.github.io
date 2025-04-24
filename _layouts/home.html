@@ -7,7 +7,7 @@ layout: base
   <h1>About</h1>
   {% for item in site.data.about %}
     <div class="about-section" style="display: flex; align-items: flex-start; gap: 20px;">
-      <img src="/assets/images/profile.jpg" alt="Profile Photo" style="width: 220px; height: 220px; object-fit: cover; border-radius: 50%;">
+      <img src="/assets/images/profile.JPG" alt="Profile Photo" style="width: 220px; height: 220px; object-fit: cover; border-radius: 50%;">
       
       <div>
         <p>{{ item.current_activity }}</p>
@@ -20,9 +20,9 @@ layout: base
           {% endfor %}
         </div>
         <div class="in-page-links" style="margin-top: 10px;">
+          <a href="#publications">Publications</a>
           <a href="#education">Education</a> |
           <a href="#experience">Experience</a> |
-          <a href="#publications">Publications</a>
         </div>        
       </div>
     </div>
