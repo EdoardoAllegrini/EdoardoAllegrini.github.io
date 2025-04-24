@@ -13,8 +13,8 @@ RUN bundle install
 COPY . ./
 
 # Expose port 4000 for Jekyll to serve the site
-# EXPOSE 4000
+EXPOSE 4000
 
 # Start Jekyll
-# CMD ["jekyll", "serve", "--host", "0.0.0.0"]
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]
 
