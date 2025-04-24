@@ -1,0 +1,29 @@
+- school: "Sapienza University of Rome"
+  degree: "Master's Degree (MSc)"
+  field: Cybersecurity
+  start_date: 2023/10
+  end_date: 2025/10
+  city: Rome
+  state: IT
+  link: https://corsidilaurea.uniroma1.it/en/corso/2023/29389/home
+  thesis: ""
+  grade: ""
+
+- school: "Sapienza University of Rome"
+  degree: "Bachelor's Degree (BSc)"
+  field: Computer Science
+  start_date: 2020/10
+  end_date: 2023/07
+  city: Rome
+  state: IT
+  link: https://corsidilaurea.uniroma1.it/en/corso/2020/29923/home
+  thesis: "A novel genetic approach for Social Bot detection"
+  grade: "110/110 Cum Laude"
+
+- school: "Liceo Scientifico Socrate"
+  degree: "High School"
+  field: "Scientific Studies"
+  start_date: 2015
+  end_date: 2020
+  city: Rome
+  state: IT

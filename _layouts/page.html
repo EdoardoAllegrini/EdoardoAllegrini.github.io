@@ -1,0 +1,11 @@
+---
+layout: base
+---
+{% if page.css %}
+  <link rel="stylesheet" href="{{ page.css | relative_url }}">
+{% endif %}
+<article class="page">
+
+  {{ content }}
+
+</article>

@@ -1,0 +1,29 @@
+- title: CacheCloudNet
+  description: "It is an IoT network architecture leveraging balloons and drones for efficient data caching and relay, designed to enhance sensor-based data collection in dynamic environments using advanced caching strategies like FIFO, LFU, and LRU."
+  link: https://github.com/EdoardoAllegrini/CacheCloudNet
+  date: 2024
+
+- title: "Malware Detection with malware images using CNN techinques"
+  description: ""
+  link: https://github.com/EdoardoAllegrini/Malware-Detection
+  date: 2023
+
+- title: "A botnet architecture made by Command and Control (C&C) and some bots"
+  description: ""
+  link: https://github.com/EdoardoAllegrini/botnet
+  date: 2023
+
+- title: WASAPhoto
+  description: "A social media platform where users can follow others, view and interact with photos in a reverse chronological feed, manage profiles, and control visibility through bans."
+  link: https://github.com/EdoardoAllegrini/WASAPhoto
+  date: 2022
+
+- title: "Covid-19 Data Analysis"
+  description: "Web App for covid-19 datas analysis developed in Python (Flask)."
+  link: ""
+  date: 2022
+
+- title: "Scraping Roman Emperors' Dynasties"
+  description: "Team Leader and Developer in a University Project: analysis, design and coding of a script that scrapes the dynasties of all Roman Emperors from Wikipedia and builds a GUI representing them as a family tree."
+  link: https://github.com/EdoardoAllegrini/RomanEmperorsWikipedia
+  date: 2021

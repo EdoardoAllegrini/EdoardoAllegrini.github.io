@@ -1,0 +1,28 @@
+- employer: "Sapienza University of Rome"
+  job_title: "Graduate Researcher (with research scholarship)"
+  start_date: 2023
+  end_date: 2025/01
+  city: Rome
+  state: IT
+  activity_description: "Research Activity"
+  tags:
+    - title: Social Network Anomaly Detection
+    - title: Disinformation
+    - title: Social Bots
+  other: 'PI: Professor <a class="link" id="prof" href="https://angelospognardi.site.uniroma1.it" target="_blank" rel="noopener noreferrer">Angelo Spognardi</a>'
+
+- employer: "Sapienza University of Rome"
+  job_title: "Graduate Researcher (with research scholarship)"
+  start_date: 2025/03
+  end_date: current
+  city: Rome
+  state: IT
+  activity_description: "Research Activity"
+  tags:
+    - title: Malware Analysis
+    - title: LLMs
+    - title: Reverse Engineering
+    - title: IPv6 Security
+    - title: Covert Channels
+  other: 'PI: Professor <a class="link" id="prof" href="https://angelospognardi.site.uniroma1.it" target="_blank" rel="noopener noreferrer">Angelo Spognardi</a>'
+                            

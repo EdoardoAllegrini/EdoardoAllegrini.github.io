@@ -1,0 +1,58 @@
+h2 {
+    text-align: center;
+    color: darkred;
+  }
+
+  .certificates {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+
+  .cert-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .cert-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cert-card h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .cert-card hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 0;
+  }
+  
+  .cert-card .issuer {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .cert-card .date {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: auto; /* ensures it's pushed to the bottom */
+  }
+
+  .cert-card p {
+    margin: 5px 0px 5px 0px;
+  }
+  

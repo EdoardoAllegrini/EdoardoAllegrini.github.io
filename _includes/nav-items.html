@@ -1,0 +1,10 @@
+<div class="nav-items">
+  {%- assign sorted_pages = site.pages | where_exp: "page", "include.paths contains page.path" | sort: "order" -%}
+  {%- for hyperpage in sorted_pages -%}
+    {%- if hyperpage.title %}
+      {%- unless hyperpage.exclude %}
+        <a class="nav-item" href="{{ hyperpage.url | relative_url }}">{{ hyperpage.title | escape }}</a>
+      {%- endunless %}
+    {%- endif -%}
+  {%- endfor -%}
+</div>

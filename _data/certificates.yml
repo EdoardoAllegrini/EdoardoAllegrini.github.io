@@ -1,0 +1,17 @@
+- title: "C1 - Certificate in Advanced English (CAE)"
+  description: "(IELTS 7.5)"
+  issuer: "Cambridge University Press & Assessment English"
+  date: 08/2024
+
+- title: "CyberX – Mind4Future"
+  description: 'Advanced and experiential training project on Cybersecurity issues. <br> I reached the final stage of the project going through: 
+                <br><span class="indent">• advanced training sessions on Cybersecurity issues,</span>
+                <br><span class="indent">• Capture The Flag challenge (passed),</span>
+                <br><span class="indent">• finals in <a class="link" href="https://cybersecurity.leonardo.com/documents/16277703/18499467/Cyber+Range+LQ+%28mm08974%29.pdf?t=1655127651496" target="_blank" rel="noopener noreferrer">Cyber Range</a>.</span>'
+  issuer: '<a class="link" href="https://www.cyber40.it/" target="_blank" rel="noopener noreferrer">Cyber 4.0</a> (national competence center specialized in Cybersecurity) & <a class="link" href="https://www.leonardo.com/it/" target="_blank" rel="noopener noreferrer">Leonardo</a> (Global leader in Aerospace, Defence and Security).'
+  date: 2023
+
+- title: "Information Engineer - State Exam - Section B"
+  description: ""
+  issuer: "National Council Italian Engineers" 
+  date: 2023
