@@ -2,7 +2,7 @@
   venue: "40th ACM/SIGAPP Symposium On Applied Computing"
   authors: "Edoardo Allegrini, Edoardo Di Paolo, Marinella Petrocchi, Angelo Spognardi"
   date: 2025
-  paper: https://arxiv.org/abs/2412.15410
+  paper: https://dl.acm.org/doi/abs/10.1145/3672608.3707950
   img: /assets/images/publications/sac2025.pdf
 
 - title: "A Proposal for Uncovering Hidden Social Bots via Genetic Similarity"
