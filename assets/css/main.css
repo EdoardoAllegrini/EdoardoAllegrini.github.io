@@ -17,11 +17,22 @@ body {
   color: darkred;
 }
 
-
 .container {
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
+}
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+  
+  body {
+    font-size: 14px;
+  }
 }
 
 /* Headings */
@@ -41,6 +52,17 @@ h1 {
 h2 {
   font-size: 1.5rem;
   color: darkred;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+  }
 }
 
 /* Paragraphs & Text */
@@ -66,12 +88,50 @@ p {
   color: darkred;
 }
 
+@media (max-width: 768px) {
+  .contact-icons a {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-icons i {
+    font-size: 1.5rem !important;
+  }
+}
+
 .in-page-links a {
   color: darkred;
 }
 
 .in-page-links a:hover {
   color: red;
+}
+
+@media (max-width: 768px) {
+  .in-page-links {
+    font-size: 0.9rem;
+  }
+}
+
+/* About section responsive layout */
+.about-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .about-section img {
+    width: 150px !important;
+    height: 150px !important;
+  }
 }
 
 /* Timeline Items (Experience, Education, Publications) */
@@ -90,6 +150,33 @@ p {
   color: #111;
 }
 
+@media (max-width: 768px) {
+  .timeline-item {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .timeline-item strong {
+    font-size: 1rem;
+  }
+}
+
+.logo-wrapper {
+  padding-right: 20px;
+  width: 40px;      /* fixed box width */
+  height: 40px;     /* fixed box height */
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;   /* prevent shrinking */
+}
+
+.employer-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* preserves aspect ratio */
+}
+
 /* Tags */
 .tags {
   margin-top: 0.5rem;
@@ -103,6 +190,14 @@ p {
   padding: 0.25rem 0.5rem;
   margin: 0.2rem;
   border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+  .tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+    margin: 0.1rem;
+  }
 }
 
 /* Links */
@@ -124,6 +219,12 @@ a.link:hover {
   margin-top: 0.5rem;
 }
 
+@media (max-width: 768px) {
+  .publication-image {
+    max-width: 120px;
+  }
+}
+
 /* Image Container */
 .image-container {
   flex-shrink: 0;
@@ -137,6 +238,19 @@ a.link:hover {
   margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+  .pub-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .publication-text {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
 .publication-text {
   flex: 1;
   padding-right: 20px;
@@ -146,6 +260,12 @@ a.link:hover {
   cursor: pointer;
   max-width: 200px;
   transition: transform 0.3s;
+}
+
+@media (max-width: 768px) {
+  .zoomable {
+    max-width: 120px;
+  }
 }
 
 .zoom-modal {
@@ -165,6 +285,19 @@ a.link:hover {
   margin: auto;
   display: block;
   width: 900px;
+  max-width: 90%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .zoom-modal {
+    padding-top: 20px;
+  }
+  
+  .zoom-modal-content {
+    width: 95%;
+    max-width: 95%;
+  }
 }
 
 .zoom-modal .close {
@@ -175,6 +308,14 @@ a.link:hover {
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .zoom-modal .close {
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+  }
 }
 
 .venue {

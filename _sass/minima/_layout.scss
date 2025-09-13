@@ -32,18 +32,18 @@
   float: right;
   border: none;
   background-color: inherit;
-
+  
   label[for="nav-trigger"], #nav-trigger {
     display: none;
   }
-
+  
   .nav-item {
     color: $text-color;
     &:not(:last-child) {
       margin-right: $spacing-unit * 0.5;
     }
   }
-
+  
   @include media-query($on-medium) {
     position: absolute;
     top: 9px;
@@ -52,62 +52,104 @@
     border: 1px solid $border-color-01;
     border-radius: 5px;
     text-align: right;
-
+    z-index: 1000; // Ensure menu appears above other content
+    
     label[for="nav-trigger"] {
       display: block;
       float: right;
       width: 36px;
       height: 36px;
       cursor: pointer;
+      position: relative;
+      z-index: 1001; // Ensure trigger is above menu items
     }
-
+    
     .menu-icon {
       float: right;
       width: 36px;
-      height: 26px;
       line-height: 0;
       padding-top: 18px;
       text-align: center;
-
+      position: absolute;
+      top: 10px;
+      right: 0;
+      
       &::before {
         font-family: "Font Awesome 6 Free";
         font-weight: 900;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
       }
-
+      
       > svg path {
         fill: $border-color-03;
       }
     }
-
+    
     #nav-trigger {
       ~ label[for=nav-trigger] .menu-icon {
         &::before {
-          content: "\f0c9";
+          content: "\f0c9"; // Hamburger menu icon
           font-size: 1.25em;
         }
       }
+      
       ~ .nav-items {
         clear: both;
-        display: none
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        min-width: 200px;
+        background-color: $background-color;
+        border: 1px solid $border-color-01;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
+      
       &:checked {
-      ~ label[for=nav-trigger] .menu-icon {
-        &::before {
-          content: "\f00d";
-          font-size: 1.5em;
+        ~ label[for=nav-trigger] .menu-icon {
+          &::before {
+            content: "\f00d"; // X (close) icon
+            font-size: 1.5em;
+          }
         }
-      }
+        
         ~ .nav-items {
           display: block;
-          padding-bottom: 5px;
+          
           .nav-item {
-            margin-left: 20px;
-            padding: 5px 10px;
+            display: block;
+            text-align: right;
+            padding: 8px 20px;
+            margin: 0;
+            color: $text-color;
+            text-decoration: none;
+            border-bottom: 1px solid $border-color-01;
+            transition: background-color 0.2s ease;
+            
+            &:last-child {
+              border-bottom: none;
+            }
+            
+            &:hover {
+              background-color: darken($background-color, 5%);
+              color: darkred;
+            }
+            
+            &:focus {
+              background-color: darken($background-color, 5%);
+              outline: 2px solid darkred;
+              outline-offset: -2px;
+            }
           }
         }
       }
     }
-
+    
     .nav-item {
       display: block;
       padding: 5px 0;
@@ -115,8 +157,44 @@
       line-height: $base-line-height;
     }
   }
+  
+  // Enhanced mobile styles for smaller screens
+  @media (max-width: 480px) {
+    right: $spacing-unit * 0.3;
+    
+    #nav-trigger:checked ~ .nav-items {
+      min-width: 180px;
+      
+      .nav-item {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  // Ensure proper stacking and accessibility
+  @media (max-width: $on-medium) {
+    // Add smooth transitions
+    .nav-items {
+      transition: all 0.3s ease;
+    }
+    
+    // Improve touch targets
+    label[for="nav-trigger"] {
+      -webkit-tap-highlight-color: transparent;
+      
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+    
+    // Better keyboard navigation
+    #nav-trigger:focus + label[for="nav-trigger"] {
+      outline: 2px solid darkred;
+      outline-offset: 2px;
+    }
+  }
 }
-
 
 
 /**

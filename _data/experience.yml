@@ -1,4 +1,5 @@
 - employer: "Sapienza University of Rome"
+  employer_logo: "/assets/images/sapienza.png"
   job_title: "Graduate Researcher (with research scholarship)"
   start_date: "2023"
   end_date: 2025/01
@@ -12,9 +13,10 @@
   other: 'PI: Professor <a class="link" id="prof" href="https://angelospognardi.site.uniroma1.it" target="_blank" rel="noopener noreferrer">Angelo Spognardi</a>'
 
 - employer: "Sapienza University of Rome"
+  employer_logo: "/assets/images/sapienza.png"
   job_title: "Graduate Researcher (with research scholarship)"
   start_date: 2025/03
-  end_date: current
+  end_date: 2025/05
   city: Rome
   state: IT
   activity_description: "Research Activity"
@@ -25,4 +27,18 @@
     - title: IPv6 Security
     - title: Covert Channels
   other: 'PI: Professor <a class="link" id="prof" href="https://angelospognardi.site.uniroma1.it" target="_blank" rel="noopener noreferrer">Angelo Spognardi</a>'
+                            
+- employer: "National Research Council -  Institute for Informatics and Telematics (CNR-IIT)"
+  employer_logo: "/assets/images/iit_cnr.svg"
+  job_title: "Research Collaborator (contract)"
+  start_date: 2025/09
+  end_date: current
+  city: Rome/Pisa
+  state: IT
+  activity_description: "Research Activity"
+  tags:
+    - title: Social Network Anomaly Detection
+    - title: Disinformation
+    - title: Social Bots
+    - title: LLMs
                             

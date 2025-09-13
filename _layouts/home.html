@@ -6,7 +6,7 @@ layout: base
 
   <h1>About</h1>
   {% for item in site.data.about %}
-    <div class="about-section" style="display: flex; align-items: flex-start; gap: 20px;">
+    <div class="about-section">
       <img src="/assets/images/profile.JPG" alt="Profile Photo" style="width: 220px; height: 220px; object-fit: cover; border-radius: 50%;">
       
       <div>
@@ -14,7 +14,7 @@ layout: base
   
         <div class="contact-icons">
           {% for contact in item.contacts %}
-            <a href="{{ contact.link }}" target="_blank">
+            <a href="{{ contact.link }}" target="_blank" rel="noopener noreferrer">
               <i class="{{ contact.icon }} fa-2x"></i>
             </a>
           {% endfor %}
@@ -32,9 +32,13 @@ layout: base
   {% assign sorted_experience = site.data.experience | sort: "start_date" | reverse %}
   {% for job in sorted_experience %}
     <div class="timeline-item">
-      <strong>{{ job.employer }}</strong><br>
-      {{ job.job_title }} · {{ job.start_date }} – {{ job.end_date }}<br>
-      <!-- {{ job.city }}, {{ job.state }} — {{ job.activity_description }}<br> -->
+        <div class="logo-wrapper">
+          <img src="{{ job.employer_logo }}" alt="{{ job.employer }} logo" class="employer-logo">
+        </div><strong>{{ job.employer }}</strong><br>
+      <div style="padding-top: 10px;">
+        {{ job.job_title }} · {{ job.start_date }} - {{ job.end_date }}<br>
+      </div>
+      <!-- {{ job.city }}, {{ job.state }} - {{ job.activity_description }}<br> -->
       <!-- {{ job.activity_description }}<br> -->
 
       {% if job.other %}
@@ -57,9 +61,9 @@ layout: base
     <div class="timeline-item">
       <strong>{{ edu.school }}</strong><br>
       {% if edu.link %}
-        {{ edu.degree }} in <a class="link" href="{{ edu.link }}" target="_blank">{{ edu.field }}</a> · {{ edu.start_date }} – {{ edu.end_date }}<br>
+        {{ edu.degree }} in <a class="link" href="{{ edu.link }}" target="_blank" rel="noopener noreferrer">{{ edu.field }}</a> · {{ edu.start_date }} - {{ edu.end_date }}<br>
       {% else %}
-        {{ edu.degree }} in {{ edu.field }} · {{ edu.start_date }} – {{ edu.end_date }}<br>
+        {{ edu.degree }} in {{ edu.field }} · {{ edu.start_date }} - {{ edu.end_date }}<br>
       {% endif %}
       <!-- {{ edu.city }}, {{ edu.state }}<br> -->
 
@@ -81,7 +85,7 @@ layout: base
       <strong>{{ pub.title }}</strong><br>
       <span class="venue">@ {{ pub.venue }}</span> · <span class="pub-date">{{ pub.date }}</span><br>
       <span class="authors">Authors:</span> {{ pub.authors }}<br>
-      <a href="{{ pub.paper }}" class="pub-link" target="_blank">Read paper →</a>
+      <a href="{{ pub.paper }}" class="pub-link" target="_blank" rel="noopener noreferrer">Read paper →</a>
     </div>
     <div class="image-container">
       <img src="{{ pub.img }}" alt="Paper thumbnail for {{ pub.title }}" class="publication-image zoomable"/>
@@ -90,9 +94,9 @@ layout: base
   {% endfor %}
 
 <!-- Zoom Modal -->
-<div id="zoom-modal" class="zoom-modal">
-  <span class="close">&times;</span>
-  <img class="zoom-modal-content" id="zoomed-img">
+<div id="zoom-modal" class="zoom-modal" role="dialog" aria-labelledby="zoom-modal-title" aria-hidden="true">
+  <span class="close" aria-label="Close modal">&times;</span>
+  <img class="zoom-modal-content" id="zoomed-img" alt="Zoomed publication image">
 </div>
 
 </div>
@@ -104,21 +108,65 @@ layout: base
     const closeBtn = document.querySelector(".zoom-modal .close");
   
     document.querySelectorAll(".zoomable").forEach(img => {
-      img.addEventListener("click", function () {
+      img.addEventListener("click", function (e) {
+        e.preventDefault();
         modal.style.display = "block";
+        modal.setAttribute("aria-hidden", "false");
         modalImg.src = this.src;
+        modalImg.alt = this.alt;
+        
+        // Prevent body scrolling when modal is open
+        document.body.style.overflow = "hidden";
       });
+      
+      // Add keyboard support
+      img.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          img.click();
+        }
+      });
+      
+      // Make images focusable for keyboard navigation
+      img.setAttribute("tabindex", "0");
     });
   
-    closeBtn.addEventListener("click", function () {
+    function closeModal() {
       modal.style.display = "none";
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "auto";
+    }
+  
+    closeBtn.addEventListener("click", closeModal);
+    
+    // Close modal with Escape key
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal.style.display === "block") {
+        closeModal();
+      }
     });
   
     window.addEventListener("click", function (e) {
       if (e.target === modal) {
-        modal.style.display = "none";
+        closeModal();
+      }
+    });
+    
+    // Handle touch events for better mobile experience
+    let touchStartY = 0;
+    
+    modal.addEventListener("touchstart", function (e) {
+      touchStartY = e.touches[0].clientY;
+    });
+    
+    modal.addEventListener("touchend", function (e) {
+      const touchEndY = e.changedTouches[0].clientY;
+      const diff = touchStartY - touchEndY;
+      
+      // Close modal on significant upward swipe
+      if (Math.abs(diff) > 50 && diff < 0) {
+        closeModal();
       }
     });
   });
-  </script>
-  
+</script>
