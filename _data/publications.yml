@@ -1,20 +1,20 @@
 - title: "Formalizing the Safety, Security, and Functional Properties of Agentic AI Systems"
   venue: "arXiv"
   authors: "Edoardo Allegrini, Ananth Shreekumar, Z. Berkay Celik"
-  date: 2025
+  date: 2025-10-01
   paper: https://arxiv.org/pdf/2510.14133
   img: /assets/images/publications/host_agent_comp.pdf
 
 - title: "Deciphering Social Behaviour: a Novel Biological Approach For Social Users Classification"
   venue: "40th ACM/SIGAPP Symposium On Applied Computing"
   authors: "Edoardo Allegrini, Edoardo Di Paolo, Marinella Petrocchi, Angelo Spognardi"
-  date: 2025
+  date: 2025-03-01
   paper: https://dl.acm.org/doi/abs/10.1145/3672608.3707950
   img: /assets/images/publications/sac2025.pdf
 
 - title: "A Proposal for Uncovering Hidden Social Bots via Genetic Similarity"
   venue: "27th International Conference on Discovery Science"
   authors: "Edoardo Allegrini, Edoardo Di Paolo, Marinella Petrocchi, Angelo Spognardi"
-  date: 2024
+  date: 2024-10-01
   paper: https://arxiv.org/pdf/2410.13512
   img: /assets/images/publications/ds2024.pdf

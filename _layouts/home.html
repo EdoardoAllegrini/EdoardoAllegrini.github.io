@@ -81,9 +81,9 @@ layout: base
   {% assign sorted_pub = site.data.publications | sort: "date" | reverse %}
   {% for pub in sorted_pub %}
   <div class="timeline-item pub-container">
-    <div class="publication-text">
+      <div class="publication-text">
       <strong>{{ pub.title }}</strong><br>
-      <span class="venue">@ {{ pub.venue }}</span> · <span class="pub-date">{{ pub.date }}</span><br>
+      <span class="venue">@ {{ pub.venue }}</span> · <span class="pub-date">{{ pub.date | date: "%Y" }}</span><br>
       <span class="authors">Authors:</span> {{ pub.authors }}<br>
       <a href="{{ pub.paper }}" class="pub-link" target="_blank" rel="noopener noreferrer">Read paper →</a>
     </div>
