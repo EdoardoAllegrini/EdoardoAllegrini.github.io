@@ -6,8 +6,8 @@
   city: Rome
   state: IT
   link: https://corsidilaurea.uniroma1.it/en/corso/2023/29389/home
-  thesis: ""
-  grade: ""
+  thesis: "DecompilerAI: From Raw Decompiler Output to Actionable Intelligence in Stripped Executable Analysis with LLMs"
+  grade: "110/110 Cum Laude"
 
 - school: "Sapienza University of Rome"
   degree: "Bachelor's Degree (BSc)"

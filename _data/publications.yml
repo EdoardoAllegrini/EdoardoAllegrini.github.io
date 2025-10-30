@@ -1,3 +1,10 @@
+- title: "Formalizing the Safety, Security, and Functional Properties of Agentic AI Systems"
+  venue: "arXiv"
+  authors: "Edoardo Allegrini, Ananth Shreekumar, Z. Berkay Celik"
+  date: 2025
+  paper: https://arxiv.org/pdf/2510.14133
+  img: /assets/images/publications/host_agent_comp.pdf
+
 - title: "Deciphering Social Behaviour: a Novel Biological Approach For Social Users Classification"
   venue: "40th ACM/SIGAPP Symposium On Applied Computing"
   authors: "Edoardo Allegrini, Edoardo Di Paolo, Marinella Petrocchi, Angelo Spognardi"
