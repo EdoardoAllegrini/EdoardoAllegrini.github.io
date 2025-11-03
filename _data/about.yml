@@ -1,9 +1,10 @@
-- current_activity: <p>I am currently pursuing a <b>Master's Degree in Cybersecurity</b> @ <a class="link"
-                        href="https://www.uniroma1.it" target="_blank" rel="noopener noreferrer">Sapienza
-                        University of Rome</a>, where I am also a <b>Graduate Researcher</b> @ Computer Science Department.</p>
-                        <p>
-                        Researcher at <a class="link" href="https://netsecuritylab.github.io/authors/edoardo-allegrini" target="_blank" rel="noopener noreferrer">NetSecurity Lab</a> headed by Professor <a class="link" id="prof"
-                        href="https://angelospognardi.site.uniroma1.it" target="_blank" rel="noopener noreferrer">Angelo Spognardi</a>.</p>
+- current_activity: |
+    <p>I'm a PhD student in Cybersecurity at Sapienza University of Rome. My research interests are at the intersection of AI and Cybersecurity.</p>
+    <p>Current focus areas include: Reverse Engineering & LLMs, Social Bots & LLMs, Security for Agentic AI systems</p>
+    <p>
+    Researcher at <a class="link" href="https://netsecuritylab.github.io/authors/edoardo-allegrini" target="_blank" rel="noopener noreferrer">NetSecurity Lab</a> headed by Professor <a class="link" id="prof"
+    href="https://angelospognardi.site.uniroma1.it" target="_blank" rel="noopener noreferrer">Angelo Spognardi</a>.</p>
+
   contacts:
     - name: GitHub
       link: https://github.com/EdoardoAllegrini

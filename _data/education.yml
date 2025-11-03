@@ -1,4 +1,12 @@
 - school: "Sapienza University of Rome"
+  degree: "PhD"
+  field: Cybersecurity
+  start_date: 2025/10
+  end_date: present
+  city: Rome
+  state: IT
+
+- school: "Sapienza University of Rome"
   degree: "Master's Degree (MSc)"
   field: Cybersecurity
   start_date: 2023/10
