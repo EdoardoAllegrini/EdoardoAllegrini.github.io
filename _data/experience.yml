@@ -27,7 +27,22 @@
     - title: IPv6 Security
     - title: Covert Channels
   other: 'PI: Professor <a class="link" id="prof" href="https://angelospognardi.site.uniroma1.it" target="_blank" rel="noopener noreferrer">Angelo Spognardi</a>'
-                            
+
+- employer: "Purdue University"
+  employer_logo: "/assets/images/purdue.png"
+  job_title: "Research Collaborator"
+  start_date: 2025/03
+  end_date: current
+  city: West Lafayette, Indiana US (remote)
+  state: IN
+  activity_description: "Research Activity"
+  tags:
+    - title: Agentic AI
+    - title: MCP
+    - title: A2A
+    - title: Multi-Agent Systems
+  other: 'PI: Dr. <a class="link" id="prof" href="https://beerkay.github.io/" target="_blank" rel="noopener noreferrer">Z. Berkay Celik</a>'
+
 - employer: "National Research Council -  Institute for Informatics and Telematics (CNR-IIT)"
   employer_logo: "/assets/images/iit_cnr.svg"
   job_title: "Research Collaborator (contract)"
@@ -40,5 +55,6 @@
     - title: Social Network Anomaly Detection
     - title: Disinformation
     - title: Social Bots
-    - title: LLMs
-                            
+    - title: LLMs   
+  other: 'PI: Senior Researcher <a class="link" id="prof" href="https://www.iit.cnr.it/marinella.petrocchi/" target="_blank" rel="noopener noreferrer">Marinella Petrocchi</a>'
+     
