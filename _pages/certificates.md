@@ -7,22 +7,31 @@ order: 2
 exclude: False
 ---
 
-<main role="main">
-    <h2>Certificates</h2>
-    <div class="certificates">
+<main role="main" class="certificates-container">
+    <h2 class="page-title">Certificates</h2>
+    
+    <div class="certificates-grid">
       {% for cert in site.data.certificates %}
-        <div class="cert-card">
-          <h3>{{ cert.title }}</h3>
-          {% if cert.description %}
-            <p>{{ cert.description | markdownify }}</p>
+        <article class="cert-card">
+          
+          <header class="cert-header">
+            <h3>{{ cert.title }}</h3>
+            <span class="cert-date">{{ cert.date }}</span>
+          </header>
+          
+          {% if cert.description and cert.description != "" %}
+            <div class="cert-body">
+              {{ cert.description | markdownify }}
+            </div>
           {% endif %}
-          <hr>
-          <p><strong>Issuer:</strong> {{ cert.issuer | markdownify }}</p>
-          <hr>
-          <p><strong>Date:</strong> {{ cert.date }}</p>
-        </div>
+          
+          <footer class="cert-footer">
+            <div class="cert-issuer">
+              <strong>Issuer:</strong> {{ cert.issuer | markdownify }}
+            </div>
+          </footer>
+          
+        </article>
       {% endfor %}
     </div>
 </main>
-
-

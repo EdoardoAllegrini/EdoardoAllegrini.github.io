@@ -1,58 +1,139 @@
-h2 {
-    text-align: center;
-    color: darkred;
-  }
+/* Main Page Container */
+.certificates-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
 
-  .certificates {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-    background-color: #f9f9f9;
-  }
+.page-title {
+  text-align: center;
+  color: #2c3e50; /* A professional slate/dark blue instead of dark red */
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+}
 
-  .cert-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .cert-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .cert-card h3 {
-    font-size: 1.25rem;
-    margin: 0;
-    color: #333;
-  }
-  
-  .cert-card hr {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 0;
-  }
-  
-  .cert-card .issuer {
-    text-align: center;
-    font-size: 0.95rem;
-    color: #555;
-  }
-  
-  .cert-card .date {
-    text-align: right;
-    font-size: 0.9rem;
-    color: #777;
-    margin-top: auto; /* ensures it's pushed to the bottom */
-  }
+/* Grid Layout */
+.certificates-grid {
+  display: grid;
+  /* Updated to prevent horizontal overlap on very small screens */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 1.5rem;
+}
 
-  .cert-card p {
-    margin: 5px 0px 5px 0px;
-  }
+.cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+.cert-header h3 {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  margin: 0 0 3px 0;
+  color: #111827;
+  font-weight: 600;
+}
+
+.cert-date {
+  font-size: 0.85rem;
+  color: #4b5563;
+  background-color: #f3f4f6;
+  padding: 0.3rem 0.7rem;
+  border-radius: 9999px; /* Creates a clean pill shape */
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.cert-body p {
+  margin: 0 0 0.75rem 0;
+}
+
+.cert-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Styling the markdown list */
+.cert-body ul {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+
+.cert-body li {
+  margin-bottom: 0.25rem;
+}
+
+/* Links inside cards */
+.cert-card a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.cert-card a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.cert-issuer {
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.cert-issuer strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* The markdown filter outputs <p> tags. This ensures inline display next to "Issuer:" */
+.cert-issuer p {
+  display: inline;
+  margin: 0;
+}
+
+/* 1. Ensure the card acts as a full-height flex container */
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; <-- REMOVE THIS */
+  box-sizing: border-box; /* Ensures padding/border don't add to the total width/height */
+  overflow-wrap: break-word; /* Prevents long URLs/text from pushing outside the card */
   
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* 2. Standardize the header so the bottom borders align horizontally */
+.cert-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers both title and date */
+  justify-content: flex-start;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f3f4f6;
+  min-height: 80px; /* Swapped to min-height to prevent mobile text overflow */
+  gap: 0.5rem; /* Adds clean spacing between the title and date */
+}
+/* 3. Tell the body to absorb all the empty space */
+.cert-body {
+  flex-grow: 1; /* This is the magic property that stretches the middle */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Keeps the text aligned to the top of the section */
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* 4. Pin the footer to the bottom */
+.cert-footer {
+  margin-top: auto; /* Pushes against the flex-grow of the body, pinning this to the bottom */
+  padding-top: 1rem;
+  border-top: 1px solid #f3f4f6;
+}

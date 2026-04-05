@@ -32,7 +32,7 @@
   employer_logo: "/assets/images/purdue.png"
   job_title: "Research Collaborator"
   start_date: 2025/03
-  end_date: current
+  end_date: "Present"
   city: West Lafayette, Indiana US (remote)
   state: IN
   activity_description: "Research Activity"
@@ -47,7 +47,7 @@
   employer_logo: "/assets/images/iit_cnr.svg"
   job_title: "Research Collaborator (contract)"
   start_date: 2025/09
-  end_date: current
+  end_date: 2025/12
   city: Rome/Pisa
   state: IT
   activity_description: "Research Activity"
