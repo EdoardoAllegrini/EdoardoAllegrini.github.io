@@ -3,102 +3,147 @@ layout: base
 ---
 
 <div class="container">
-
   <h1>About</h1>
   {% for item in site.data.about %}
-    <div class="about-section">
-      <img src="/assets/images/profile.JPG" alt="Profile Photo" style="width: 220px; height: 220px; object-fit: cover; border-radius: 50%;">
-      
-      <div>
-        <p>{{ item.current_activity }}</p>
-  
-        <div class="contact-icons">
-          {% for contact in item.contacts %}
-            <a href="{{ contact.link }}" target="_blank" rel="noopener noreferrer">
-              <i class="{{ contact.icon }} fa-2x"></i>
-            </a>
-          {% endfor %}
-        </div>
-        <div class="in-page-links" style="margin-top: 10px;">
-          <a href="#publications">Publications</a> |
-          <a href="#education">Education</a> |
-          <a href="#experience">Experience</a>
-        </div>        
+  <div class="about-section">
+    <img
+      src="/assets/images/profile.JPG"
+      alt="Profile Photo"
+      style="width: 220px; height: 220px; object-fit: cover; border-radius: 50%"
+    />
+
+    <div>
+      <p>{{ item.current_activity }}</p>
+
+      <div class="contact-icons">
+        {% for contact in item.contacts %}
+        <a href="{{ contact.link }}" target="_blank" rel="noopener noreferrer">
+          <i class="{{ contact.icon }} fa-2x"></i>
+        </a>
+        {% endfor %}
       </div>
-    </div>
-  {% endfor %}
-
-  <h2 id="experience">Experience</h2>
-  {% assign sorted_experience = site.data.experience | sort: "end_date" | reverse %}
-  {% for job in sorted_experience %}
-    <div class="timeline-item">
-        <div class="logo-wrapper">
-          <img src="{{ job.employer_logo }}" alt="{{ job.employer }} logo" class="employer-logo">
-        </div><strong>{{ job.employer }}</strong><br>
-      <div style="padding-top: 10px;">
-        {{ job.job_title }} · {{ job.start_date }} - {{ job.end_date }}<br>
+      <div class="in-page-links" style="margin-top: 10px">
+        <a href="#publications">Publications</a> |
+        <a href="#education">Education</a> |
+        <a href="#experience">Experience</a>
       </div>
-      <!-- {{ job.city }}, {{ job.state }} - {{ job.activity_description }}<br> -->
-      <!-- {{ job.activity_description }}<br> -->
-
-      {% if job.other %}
-        <p>{{ job.other }}</p>
-      {% endif %}
-
-      {% if job.tags %}
-        <div class="tags">
-          {% for tag in job.tags %}
-            <span class="tag"><b>{{ tag.title }}</b></span>
-          {% endfor %}
-        </div>
-      {% endif %}
-    </div>
-  {% endfor %}
-
-  <h2 id="education">Education</h2>
-  {% assign sorted_edu = site.data.education | sort: "end_date" | reverse %}
-  {% for edu in sorted_edu %}
-    <div class="timeline-item">
-      <strong>{{ edu.school }}</strong><br>
-      {% if edu.link %}
-        {{ edu.degree }} in <a class="link" href="{{ edu.link }}" target="_blank" rel="noopener noreferrer">{{ edu.field }}</a> · {{ edu.start_date }} - {{ edu.end_date }}<br>
-      {% else %}
-        {{ edu.degree }} in {{ edu.field }} · {{ edu.start_date }} - {{ edu.end_date }}<br>
-      {% endif %}
-      <!-- {{ edu.city }}, {{ edu.state }}<br> -->
-
-      {% if edu.thesis and edu.thesis != "" %}
-        Thesis: <i>{{ edu.thesis }}</i><br>
-      {% endif %}
-
-      {% if edu.grade and edu.grade != "" %}
-        Grade: <b>{{ edu.grade }}</b>
-      {% endif %}
-    </div>
-  {% endfor %}
-
-  <h2 id="publications">Publications</h2>
-  {% assign sorted_pub = site.data.publications | sort: "date" | reverse %}
-  {% for pub in sorted_pub %}
-  <div class="timeline-item pub-container">
-      <div class="publication-text">
-      <strong>{{ pub.title }}</strong><br>
-      <span class="venue">@ {{ pub.venue }}</span> · <span class="pub-date">{{ pub.date | date: "%Y" }}</span><br>
-      <span class="authors">Authors:</span> {{ pub.authors }}<br>
-      <a href="{{ pub.paper }}" class="pub-link" target="_blank" rel="noopener noreferrer">Read paper →</a>
-    </div>
-    <div class="image-container">
-      <img src="{{ pub.img }}" alt="Paper thumbnail for {{ pub.title }}" class="publication-image zoomable"/>
     </div>
   </div>
   {% endfor %}
 
-<!-- Zoom Modal -->
-<div id="zoom-modal" class="zoom-modal" role="dialog" aria-labelledby="zoom-modal-title" aria-hidden="true">
-  <span class="close" aria-label="Close modal">&times;</span>
-  <img class="zoom-modal-content" id="zoomed-img" alt="Zoomed publication image">
-</div>
+  <h2 id="experience">Experience</h2>
+  {% assign sorted_experience = site.data.experience | sort: "end_date" |
+  reverse %} {% for job in sorted_experience %}
+  <div class="timeline-item">
+    <div class="timeline-heading">
+      <div class="timeline-title-group">
+        <div class="logo-wrapper">
+          <img
+            src="{{ job.employer_logo }}"
+            alt="{{ job.employer }} logo"
+            class="employer-logo"
+          />
+        </div>
+        <div>
+          <strong>{{ job.employer }}</strong>
+          <div class="sub-title">{{ job.job_title }}</div>
+        </div>
+      </div>
+      <div class="timeline-date">
+        <i class="far fa-calendar-alt"></i> {{ job.start_date }} &mdash; {{
+        job.end_date }}
+      </div>
+    </div>
 
+    {% if job.other %}
+    <p>{{ job.other }}</p>
+    {% endif %} {% if job.tags %}
+    <div class="tags">
+      {% for tag in job.tags %}
+      <span class="tag"><b>{{ tag.title }}</b></span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+  <h2 id="education">Education</h2>
+  {% assign sorted_edu = site.data.education | sort: "end_date" | reverse %} {%
+  for edu in sorted_edu %}
+  <div class="timeline-item">
+    <div class="timeline-heading">
+      <div class="timeline-title-group">
+        <div>
+          <strong>{{ edu.school }}</strong>
+          <div class="sub-title">
+            {% if edu.link %} {{ edu.degree }} in
+            <a
+              class="link"
+              href="{{ edu.link }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ edu.field }}</a
+            >
+            {% else %} {{ edu.degree }} in {{ edu.field }} {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="timeline-date">
+        <i class="far fa-calendar-alt"></i> {{ edu.start_date }} &mdash; {{
+        edu.end_date }}
+      </div>
+    </div>
+
+    {% if edu.thesis and edu.thesis != "" %} Thesis: <i>{{ edu.thesis }}</i
+    ><br />
+    {% endif %} {% if edu.grade and edu.grade != "" %} Grade:
+    <b>{{ edu.grade }}</b>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+  <h2 id="publications">Publications</h2>
+  {% assign sorted_pub = site.data.publications | sort: "date" | reverse %} {%
+  for pub in sorted_pub %}
+  <div class="timeline-item pub-container">
+    <div class="publication-text">
+      <strong>{{ pub.title }}</strong><br />
+      <span class="venue">@ {{ pub.venue }}</span> ·
+      <span class="pub-date">{{ pub.date | date: "%Y" }}</span><br />
+      <span class="authors">Authors:</span> {{ pub.authors }}<br />
+      <a
+        href="{{ pub.paper }}"
+        class="pub-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Read paper →</a
+      >
+    </div>
+    <div class="image-container">
+      <img
+        src="{{ pub.img }}"
+        alt="Paper thumbnail for {{ pub.title }}"
+        class="publication-image zoomable"
+      />
+    </div>
+  </div>
+  {% endfor %}
+
+  <!-- Zoom Modal -->
+  <div
+    id="zoom-modal"
+    class="zoom-modal"
+    role="dialog"
+    aria-labelledby="zoom-modal-title"
+    aria-hidden="true"
+  >
+    <span class="close" aria-label="Close modal">&times;</span>
+    <img
+      class="zoom-modal-content"
+      id="zoomed-img"
+      alt="Zoomed publication image"
+    />
+  </div>
 </div>
 
 <script>
@@ -106,19 +151,19 @@ layout: base
     const modal = document.getElementById("zoom-modal");
     const modalImg = document.getElementById("zoomed-img");
     const closeBtn = document.querySelector(".zoom-modal .close");
-  
-    document.querySelectorAll(".zoomable").forEach(img => {
+
+    document.querySelectorAll(".zoomable").forEach((img) => {
       img.addEventListener("click", function (e) {
         e.preventDefault();
         modal.style.display = "block";
         modal.setAttribute("aria-hidden", "false");
         modalImg.src = this.src;
         modalImg.alt = this.alt;
-        
+
         // Prevent body scrolling when modal is open
         document.body.style.overflow = "hidden";
       });
-      
+
       // Add keyboard support
       img.addEventListener("keydown", function (e) {
         if (e.key === "Enter" || e.key === " ") {
@@ -126,43 +171,43 @@ layout: base
           img.click();
         }
       });
-      
+
       // Make images focusable for keyboard navigation
       img.setAttribute("tabindex", "0");
     });
-  
+
     function closeModal() {
       modal.style.display = "none";
       modal.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "auto";
     }
-  
+
     closeBtn.addEventListener("click", closeModal);
-    
+
     // Close modal with Escape key
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && modal.style.display === "block") {
         closeModal();
       }
     });
-  
+
     window.addEventListener("click", function (e) {
       if (e.target === modal) {
         closeModal();
       }
     });
-    
+
     // Handle touch events for better mobile experience
     let touchStartY = 0;
-    
+
     modal.addEventListener("touchstart", function (e) {
       touchStartY = e.touches[0].clientY;
     });
-    
+
     modal.addEventListener("touchend", function (e) {
       const touchEndY = e.changedTouches[0].clientY;
       const diff = touchStartY - touchEndY;
-      
+
       // Close modal on significant upward swipe
       if (Math.abs(diff) > 50 && diff < 0) {
         closeModal();

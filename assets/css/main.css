@@ -344,3 +344,59 @@ a.link:hover {
 .pub-link:hover {
   text-decoration: underline;
 }
+
+/* Fancy Timeline Headings & Dates */
+.timeline-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  gap: 15px; 
+}
+
+.timeline-title-group {
+  display: flex;
+  align-items: center;
+}
+
+/* Specific fix for education items without a logo wrapper */
+.timeline-item h2 + .timeline-heading .timeline-title-group,
+#education + .timeline-item .timeline-title-group {
+  align-items: flex-start;
+}
+
+.sub-title {
+  color: #555;
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+}
+
+/* The Date Pill */
+.timeline-date {
+  flex-shrink: 0;
+  background-color: #fdf2f2; /* Soft red tint */
+  color: darkred;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px; /* Pill shape */
+  border: 1px solid #fadcdc;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+/* Responsive adjustment for dates */
+@media (max-width: 768px) {
+  .timeline-heading {
+    flex-direction: column;
+  }
+  
+  .timeline-date {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
